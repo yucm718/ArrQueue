@@ -12,12 +12,14 @@ public class Queue8 {
     //定义一个数组，保存皇后存放位置的结果，
     int[] array = new int[max];
     static int count = 0;
+    static int judgeCount = 0;
 
     public static void main(String[] args) {
         //测试
         Queue8 queue8 = new Queue8();
         queue8.check(0);
         System.out.printf("一共有 %d 种解法" , count);
+        System.out.printf("一共判断冲突的次数： %d " , judgeCount);
 
     }
     //编写一个方法，放置第n个皇后
@@ -42,6 +44,7 @@ public class Queue8 {
 
     //查看当我们放置第n个皇后，就去检测该皇后是否和前面已经摆放的皇后冲突
     private boolean judge(int n){
+        judgeCount++;
         for (int i = 0;i < n; i++){
             //说明
             //1.array[i] == array[n] 表示判断第n个皇后是否和前面的n-1个皇后在同一列
