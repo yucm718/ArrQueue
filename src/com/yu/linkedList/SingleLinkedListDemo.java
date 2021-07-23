@@ -59,7 +59,7 @@ public class SingleLinkedListDemo {
  */
     }
 
-    //方式2：
+    // 打印方式2：
     //利用栈这个数据结构，将各个节点压入栈中，然后利用栈的先进后出的特点，实现逆序打印
     public static void reversePrint(HeroNode head){
         if(head.next == null){
@@ -158,6 +158,7 @@ class SingleLinkedList{
     public HeroNode getHead(){
         return head;
     }
+
     // 添加节点到单链表
     // 思路：当不考虑编号顺序时，
     // 1.找到当前链表的最后节点
